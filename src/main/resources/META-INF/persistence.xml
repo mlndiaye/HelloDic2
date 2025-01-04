@@ -11,6 +11,8 @@
         <!-- Entity Classes -->
         <class>sn.edu.ept.git.entities.Personne</class>
         <class>sn.edu.ept.git.entities.Telephone</class>
+        <class>sn.edu.ept.git.entities.Etudiant</class>
+        <class>sn.edu.ept.git.entities.Carte</class>
 
         <!-- EclipseLink Properties -->
         <properties>

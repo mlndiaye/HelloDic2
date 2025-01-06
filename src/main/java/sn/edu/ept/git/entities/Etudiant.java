@@ -4,32 +4,26 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
+@SuperBuilder
 @Entity
-public class Etudiant {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+@DiscriminatorValue("ELEVE-INGENIEUR")
 
-    @Column(nullable = false)
-    private String nom;
-
-    @Column(nullable = false)
-    private String prenom;
-    private String telephone;
-    private String adresse;
+public class Etudiant extends Personne {
 
     @OneToOne(mappedBy = "etudiant")
     private Carte carte;
 
-    @ManyToOne
-    private Pays paysNaissance;
+    @OneToOne
+    private Etudiant voisin;
 
-    @ManyToMany
-    private List<Pays> nationalites;
+    private Integer numeroChambre;
+    @Column(nullable = false)
+    private String pavillon;
+
 }

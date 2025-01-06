@@ -5,6 +5,7 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 import sn.edu.ept.git.entities.Carte;
 import sn.edu.ept.git.entities.Etudiant;
+import sn.edu.ept.git.entities.Personne;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -19,9 +20,14 @@ public class TestInterceptor {
         EntityManager em = emf.createEntityManager();
 
         Etudiant touba = Etudiant.builder()
-                .nom("Touba")
-                .prenom("Ali")
+                .numeroChambre(17)
+                .nom("Fall")
+                .prenom("Touba")
+                .adresse("Pikine")
+                .pavillon("H4")
                 .build();
+
+
         Carte toubaCarte = Carte.builder()
                 .code("ddk")
                 .etudiant(touba)
@@ -37,6 +43,12 @@ public class TestInterceptor {
         em.persist(toubaCarte);
         System.out.println("####" + toubaCarte.getDateCreation());
 
+        Personne p = Personne.builder()
+                        .adresse("Pikine")
+                .nom("Fall")
+                .prenom("Touba")
+                                .build();
+        em.persist(p);
         em.getTransaction().commit();
         em.close();
         emf.close();

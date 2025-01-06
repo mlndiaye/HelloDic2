@@ -20,4 +20,6 @@ public class Departement {
     @OneToMany(mappedBy = "departement")
     private List<Filiaire> filiaires;
 
+    @Embedded
+    private Contact contact;
 }

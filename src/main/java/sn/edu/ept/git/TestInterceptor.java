@@ -4,6 +4,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 import sn.edu.ept.git.entities.Carte;
+import sn.edu.ept.git.entities.Enseignant;
 import sn.edu.ept.git.entities.Etudiant;
 import sn.edu.ept.git.entities.Personne;
 
@@ -43,7 +44,7 @@ public class TestInterceptor {
         em.persist(toubaCarte);
         System.out.println("####" + toubaCarte.getDateCreation());
 
-        Personne p = Personne.builder()
+        Enseignant p = Enseignant.builder()
                         .adresse("Pikine")
                 .nom("Fall")
                 .prenom("Touba")

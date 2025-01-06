@@ -11,6 +11,4 @@ public class Telephone {
     private String number;
     private String operateur;
 
-    @ManyToOne
-    private Personne proprietaire;
 }

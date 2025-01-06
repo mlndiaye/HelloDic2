@@ -14,8 +14,8 @@ import java.util.List;
 @NoArgsConstructor
 @SuperBuilder
 
-@Entity
-@Inheritance(strategy = InheritanceType.JOINED)
+@MappedSuperclass
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @DiscriminatorColumn(name = "ROLE")
 @DiscriminatorValue("EMPLOYE")
 public class Personne {
@@ -28,8 +28,7 @@ public class Personne {
 
     @Column(nullable = false)
     private String prenom;
-    private String telephone;
-    private String adresse;
+
 
     private LocalDate dateNaissance;
     @ManyToOne
@@ -37,4 +36,7 @@ public class Personne {
 
     @ManyToMany
     private List<Pays> nationalites;
+
+    @Embedded
+    private Contact contact;
 }

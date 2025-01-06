@@ -15,7 +15,7 @@ import java.util.List;
 @SuperBuilder
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "ROLE")
 @DiscriminatorValue("EMPLOYE")
 public class Personne {

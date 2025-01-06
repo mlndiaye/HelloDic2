@@ -15,7 +15,7 @@ public class Filiaire {
     @Column(unique = true, nullable = false)
     private String nom;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DEPARTEMENT")
     private Departement departement;
 }

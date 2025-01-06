@@ -13,6 +13,11 @@
         <class>sn.edu.ept.git.entities.Telephone</class>
         <class>sn.edu.ept.git.entities.Etudiant</class>
         <class>sn.edu.ept.git.entities.Carte</class>
+        <class>sn.edu.ept.git.entities.Departement</class>
+        <class>sn.edu.ept.git.entities.Filiaire</class>
+        <class>sn.edu.ept.git.entities.Pays</class>
+
+
 
         <!-- EclipseLink Properties -->
         <properties>

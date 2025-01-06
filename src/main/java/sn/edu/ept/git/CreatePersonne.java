@@ -23,13 +23,13 @@ public class CreatePersonne {
         ali.setPrenom("Ali");
         LocalDate birthday = LocalDate.of(1990, 1, 1);
         ali.setDateNaissance(birthday);
-        ali.setId(1);
+//        ali.setId(1);
 
         Personne fatou=Personne.builder()
                 .nom("Ndiaye")
                 .prenom("Fatou")
                 .dateNaissance(LocalDate.of(2000, 10, 21))
-                .id(5)
+//                .id(5)
                 .build();
 
         System.out.println("Create personne " + ali);

@@ -1,13 +1,19 @@
 package sn.edu.ept.git.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
+import java.util.List;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 public class Etudiant {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(nullable = false)
@@ -20,4 +26,10 @@ public class Etudiant {
 
     @OneToOne(mappedBy = "etudiant")
     private Carte carte;
+
+    @ManyToOne
+    private Pays paysNaissance;
+
+    @ManyToMany
+    private List<Pays> nationalites;
 }

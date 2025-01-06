@@ -15,6 +15,8 @@
         <class>sn.edu.ept.git.entities.Carte</class>
         <class>sn.edu.ept.git.entities.Departement</class>
         <class>sn.edu.ept.git.entities.Filiaire</class>
+        <class>sn.edu.ept.git.entities.Pays</class>
+
 
 
         <!-- EclipseLink Properties -->

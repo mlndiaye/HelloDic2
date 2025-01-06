@@ -17,6 +17,7 @@
         <class>sn.edu.ept.git.entities.Filiaire</class>
         <class>sn.edu.ept.git.entities.Pays</class>
         <class>sn.edu.ept.git.entities.Enseignant</class>
+        <class>sn.edu.ept.git.entities.Creneau</class>
 
 
 

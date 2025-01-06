@@ -3,10 +3,7 @@ package sn.edu.ept.git;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
-import sn.edu.ept.git.entities.Carte;
-import sn.edu.ept.git.entities.Enseignant;
-import sn.edu.ept.git.entities.Etudiant;
-import sn.edu.ept.git.entities.Personne;
+import sn.edu.ept.git.entities.*;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -24,7 +21,12 @@ public class TestInterceptor {
                 .numeroChambre(17)
                 .nom("Fall")
                 .prenom("Touba")
-                .adresse("Pikine")
+                .contact(
+                        Contact.builder()
+                                .adresse("Pikine")
+                                .email("nidayeml@ept.sn")
+                                .fb("amethlamine")
+                                .build())
                 .pavillon("H4")
                 .build();
 
@@ -45,7 +47,12 @@ public class TestInterceptor {
         System.out.println("####" + toubaCarte.getDateCreation());
 
         Enseignant p = Enseignant.builder()
-                        .adresse("Pikine")
+                .contact(
+                        Contact.builder()
+                                .adresse("Pikinei")
+                                .email("nidayeml1@ept.sn")
+                                .fb("amethlamine11")
+                                .build())
                 .nom("Fall")
                 .prenom("Touba")
                                 .build();

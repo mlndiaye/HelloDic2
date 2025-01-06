@@ -31,7 +31,7 @@ public class TestInterceptor {
         System.out.println("####" + toubaCarte.getDateCreation());
 
         em.getTransaction().begin();
-        em.persist(touba);
+//        em.persist(touba);
         em.persist(toubaCarte);
         System.out.println("####" + toubaCarte.getDateCreation());
 
